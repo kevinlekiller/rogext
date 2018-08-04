@@ -27,7 +27,7 @@
 #if CPUTYPE == AMD
     #define VDIV1 0.6475
     #define VDIV2 0.0025
-    #else
+#else
     #define VDIV1 1.28
     #define VDIV2 0.005
 #endif
