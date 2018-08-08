@@ -232,8 +232,10 @@ void loop()
   Serial.print(", CPU temp is: ");
   Serial.print(buf1);
   Serial.println(" C");
-  digitalWrite(fanControlPin, HIGH);
-  fanStatus = 1;
+  if (!fanStatus) {
+    digitalWrite(fanControlPin, HIGH);
+    fanStatus = 1;
+  }
   setFanPWM(wPWM);
 }
 
